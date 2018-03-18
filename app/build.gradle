@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.panda.xglide"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    /**
+     * glide 4的特殊要求
+     *  Min Sdk Version - 使用 Glide 需要 min SDK 版本 API 14 (Ice Cream Sandwich) 或更高。
+     *  Compile Sdk Version - Glide 必须使用 API 27 (Oreo MR1) 或更高版本的 SDK 来编译。
+     *  Support Library Version - Glide 使用的支持库版本为 27。
+     */
+    api ('com.github.bumptech.glide:glide:4.6.1') {
+        exclude group: "com.android.support"
+    }
+    /**
+     * 为了适应GlideApp对象
+     */
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+    api "com.github.bumptech.glide:okhttp3-integration:4.6.1"
+
+    api 'com.squareup.okhttp3:okhttp:3.9.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+
+    api 'io.reactivex.rxjava2:rxjava:2.1.7'
+    api 'org.reactivestreams:reactive-streams:1.0.1'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+}

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">XGlide</string>
+    <array name="gl_dash">
+        <item>8</item>
+        <item>4</item>
+        <item>16</item>
+        <item>4</item>
+    </array>
+    <string name="gl_url">https://www.baidu.com/img/bd_logo1.png</string>
+    <string name="gl_url_gif">https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1497276379533&amp;di=71435f66d66221eb36dab266deb9d6d2&amp;imgtype=0&amp;src=http%3A%2F%2Fatt.bbs.duowan.com%2Fforum%2F201608%2F02%2F190418bmy9zqm94qxlmqf4.gif</string>
+</resources>

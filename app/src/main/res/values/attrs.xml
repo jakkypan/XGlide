@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ImageShapeView">
+        <attr name="blShape" format="enum">
+            <enum name="circle" value="0" />
+            <enum name="rectangle" value="1" />
+            <enum name="triangle" value="2" />
+            <enum name="heart" value="3" />
+        </attr>
+        <!-- 该值在blShape为circle是无效 -->
+        <attr name="blRadius" format="dimension|reference" />
+        <attr name="blBorderWidth" format="dimension|reference" />
+        <attr name="blBorderColor" format="color|reference" />
+        <!-- 该值应该是一个数组，并且数组是偶数个，决定了dash的开合情况 -->
+        <attr name="blBorderDashArr" format="reference" />
+        <!-- 对图形进行旋转 -->
+        <attr name="blRotate" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="GlideView">
+        <attr name="glUrl" format="string|reference" />
+        <attr name="glPlaceholder" format="reference" />
+        <attr name="glError" format="reference" />
+        <attr name="glFallback" format="reference" />
+        <attr name="glResize" format="dimension|reference" />
+        <attr name="glGlideType" format="enum">
+            <enum name="bitmap" value="0" />
+            <enum name="drawable" value="1" />
+            <enum name="gif" value="2" />
+            <enum name="file" value="3" />
+        </attr>
+        <attr name="glCache" format="boolean" />
+        <attr name="glGifCount" format="integer" />
+    </declare-styleable>
+</resources>

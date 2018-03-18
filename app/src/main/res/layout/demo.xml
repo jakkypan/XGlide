@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="2"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.panda.xglide.shapeimage.ShapeImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/glide_test"
+                app:blBorderColor="#00ff00"
+                app:blBorderDashArr="@array/gl_dash"
+                app:blBorderWidth="5dp"/>
+
+            <com.panda.xglide.shapeimage.ShapeImageView
+                app:blShape="circle"
+                android:layout_marginTop="20dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/glide_test"
+                app:blBorderColor="#00ff00"
+                app:blBorderDashArr="@array/gl_dash"
+                app:blBorderWidth="5dp"/>
+
+            <com.panda.xglide.shapeimage.ShapeImageView
+                android:src="@drawable/glide_test"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="20dp"
+                app:blBorderWidth="5dp"
+                app:blRadius="8dp"
+                app:blShape="rectangle"
+                app:blBorderDashArr="@array/gl_dash"
+                app:blBorderColor="@android:color/holo_red_dark"
+                android:layout_width="200dp"
+                android:layout_height="150dp"/>
+
+            <com.panda.xglide.shapeimage.ShapeImageView
+                android:src="@drawable/glide_test"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="20dp"
+                app:blBorderWidth="5dp"
+                app:blRadius="8dp"
+                app:blShape="triangle"
+                app:blBorderDashArr="@array/gl_dash"
+                app:blRotate="60"
+                app:blBorderColor="@android:color/holo_red_dark"
+                android:layout_width="200dp"
+                android:layout_height="150dp"/>
+
+            <com.panda.xglide.shapeimage.ShapeImageView
+                android:src="@drawable/glide_test"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="20dp"
+                app:blBorderWidth="5dp"
+                app:blRadius="8dp"
+                app:blShape="heart"
+                app:blBorderDashArr="@array/gl_dash"
+                app:blBorderColor="@android:color/holo_red_dark"
+                android:layout_width="200dp"
+                android:layout_height="180dp"/>
+
+            <com.panda.xglide.GlideImageView
+                android:id="@+id/png"
+                android:layout_marginTop="20dp"
+                app:blBorderColor="#00EEff"
+                app:blShape="rectangle"
+                app:glGlideType="bitmap"
+                app:blBorderWidth="5dp"
+                app:blRadius="8dp"
+                app:glPlaceholder="@drawable/glide_test"
+                app:glError="@drawable/glide_test"
+                app:glUrl="@string/gl_url"
+                android:layout_width="100dp"
+                android:layout_height="60dp"/>
+
+            <com.panda.xglide.GlideImageView
+                android:id="@+id/gif"
+                android:layout_marginTop="20dp"
+                app:blShape="rectangle"
+                app:glGlideType="gif"
+                app:glCache="false"
+                app:glPlaceholder="@drawable/glide_test"
+                app:glError="@drawable/glide_test"
+                app:glGifCount="3"
+                app:glUrl="@string/gl_url_gif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.panda.xglide.GlideImageView
+                android:layout_marginTop="20dp"
+                app:glGlideType="drawable"
+                app:glUrl="@mipmap/ic_launcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
